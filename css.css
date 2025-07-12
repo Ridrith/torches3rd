@@ -1,0 +1,452 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Open+Sans:wght@400;600&display=swap');
+
+/* Base Styles */
+body {
+    background-color: #1a1a1a;
+    color: #998855;
+}
+
+.sheet-wrapper {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    background: #1a1a1a;
+    padding: 20px;
+    border: 2px solid #998855;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.sheet-header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.sheet-header-row {
+    display: flex;
+    gap: 20px;
+}
+
+.sheet-column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+}
+
+.sheet-column label {
+    font-family: 'Crimson Text', serif;
+    color: #998855;
+    font-size: 14px;
+}
+
+.sheet-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #998855;
+    background: #2a2a2a;
+    color: #cccccc;
+    border-radius: 5px;
+}
+
+/* Section Styles */
+.sheet-section {
+    margin-bottom: 20px;
+}
+
+.sheet-section h3 {
+    font-family: 'Crimson Text', serif;
+    color: #998855;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #998855;
+    padding-bottom: 5px;
+}
+
+/* Stats Section */
+.sheet-stats-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background: #222222;
+    padding: 15px;
+    border: 1px solid #998855;
+    border-radius: 5px;
+}
+
+.sheet-stat-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.sheet-stat-block label {
+    width: 80px;
+    font-family: 'Crimson Text', serif;
+    color: #998855;
+}
+
+.sheet-stat-block input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #998855;
+    background: #2a2a2a;
+    color: #cccccc;
+    border-radius: 5px;
+}
+
+.sheet-roll-button {
+    background: #2a2a2a;
+    color: #998855;
+    border: 1px solid #998855;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+.sheet-roll-button:hover {
+    background: #333333;
+    border-color: #b4a062;
+    color: #b4a062;
+}
+
+/* Wyrd and Omen Section */
+.sheet-wyrd-omen-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222222;
+    padding: 15px;
+    border: 1px solid #998855;
+    border-radius: 5px;
+    position: relative;
+}
+
+.sheet-wyrd-block,
+.sheet-omen-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.sheet-wyrd-points,
+.sheet-omen-points {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.wyrd-point,
+.omen-die {
+    width: 20px;
+    height: 20px;
+    background: #2a2a2a;
+    border: 1px solid #998855;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.wyrd-point:checked,
+.omen-die:checked {
+    background: #998855;
+}
+
+.sheet-divider {
+    background: url('https://example.com/divider.png') no-repeat center center;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Action Points Section */
+.sheet-action-points {
+    display: flex;
+    gap: 10px;
+    background: #222222;
+    padding: 15px;
+    border: 1px solid #998855;
+    border-radius: 5px;
+}
+
+.action-point {
+    width: 20px;
+    height: 20px;
+    background: #2a2a2a;
+    border: 1px solid #998855;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.action-point:checked {
+    background: #998855;
+}
+
+/* Combat Section */
+.sheet-combat-section {
+    display: flex;
+    gap: 20px;
+    background: #222222;
+    padding: 15px;
+    border: 1px solid #998855;
+    border-radius: 5px;
+}
+
+.sheet-hp-block,
+.sheet-defense-block,
+.sheet-armor-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sheet-hp-block input[type="number"],
+.sheet-defense-block input[type="number"],
+.sheet-armor-block select {
+    width: 60px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #998855;
+    background: #2a2a2a;
+    color: #cccccc;
+    border-radius: 5px;
+}
+
+/* Conditions Section */
+.sheet-condition-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    background: #222222;
+    padding: 8px;
+    border: 1px solid #998855;
+    border-radius: 5px;
+}
+
+.sheet-condition {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.sheet-condition label {
+    font-family: 'Crimson Text', serif;
+    color: #998855;
+}
+
+.sheet-condition input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    background: #2a2a2a;
+    border: 1px solid #998855;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.sheet-condition input[type="checkbox"]:checked {
+    background: #998855;
+}
+
+/* Weapons Section */
+.sheet-weapon-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 10px;
+    margin: 5px 0;
+    background: #222222;
+    padding: 10px;
+    border: 1px solid #998855;
+    border-radius: 5px;
+}
+
+.sheet-weapon-damage {
+    padding: 5px;
+    border: 1px solid #998855;
+    background: #2a2a2a;
+    color: #cccccc;
+    border-radius: 5px;
+}
+
+/* Inventory Section */
+.sheet-inventory-header {
+    display: flex;
+    justify-content: space-between;
+    background: #222222;
+    padding: 10px;
+    border: 1px solid #998855;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.sheet-slots {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.sheet-inventory-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 10px;
+    margin: 5px 0;
+    background: #222222;
+    padding: 10px;
+    border: 1px solid #998855;
+    border-radius: 5px;
+}
+
+.sheet-usage-die-block {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.sheet-usage-die {
+    padding: 5px;
+    border: 1px solid #998855;
+    background: #2a2a2a;
+    color: #cccccc;
+    border-radius: 5px;
+}
+
+/* Currency Section */
+.sheet-currency-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background: #222222;
+    padding: 15px;
+    border: 1px solid #998855;
+    border-radius: 5px;
+}
+
+.sheet-currency {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.sheet-currency label {
+    font-family: 'Crimson Text', serif;
+    color: #998855;
+}
+
+.sheet-currency input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #998855;
+    background: #2a2a2a;
+    color: #cccccc;
+    border-radius: 5px;
+}
+
+/* Character Details Section */
+.sheet-details-section {
+    background: #222222;
+    padding: 15px;
+    border: 1px solid #998855;
+    border-radius: 5px;
+}
+
+.sheet-details-section textarea {
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #998855;
+    background: #2a2a2a;
+    color: #cccccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+/* Roll Template */
+.sheet-rolltemplate-custom {
+    background: #2a2a2a;
+    border: 1px solid #998855;
+    color: #cccccc;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.sheet-rolltemplate-header {
+    font-family: 'Crimson Text', serif;
+    color: #998855;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-bottom: 1px solid #998855;
+    padding-bottom: 5px;
+}
+
+.sheet-rolltemplate-body {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sheet-rolltemplate-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.sheet-rolltemplate-label {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color: #998855;
+}
+
+.sheet-rolltemplate-title {
+    font-family: 'Crimson Text', serif;
+    color: #998855;
+    font-size: 24px;
+}
+
+.sheet-rolltemplate-geom {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    background: url('https://i.ibb.co/LXtR9kgc/dice-fire-1.png') no-repeat center center;
+    background-size: contain;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sheet-stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sheet-condition-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .sheet-weapon-row,
+    .sheet-inventory-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .sheet-currency-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
